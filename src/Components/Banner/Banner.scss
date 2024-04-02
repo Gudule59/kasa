@@ -11,10 +11,25 @@
 }
 
 .lmj-title {
-	padding-left: 32px;
+	padding-left: 15px;
 }
 
 .lmj-logo {
 	height: 68px;
 	width: 210px;
+}
+
+.NavLink{
+padding-left: 20px;
+
+}
+
+header{
+	width: 1240px;
+	height: 68px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between; 
+	margin-bottom: 25px;
+
 }

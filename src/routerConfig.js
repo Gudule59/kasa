@@ -1,12 +1,14 @@
-import logo from './Components/Assets/logo.png';
+import Banner from './Components/Banner/Banner.js'
+import Footer from './Components/Footer/Footer.js'
+import './Style/Style.scss';
 import React from 'react';
 import { NavLink, createBrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Root />,
-    errorElement : <PageErreur />,
+    element: <div ClassName="main" style={{ maxwidth: '1440px', height: 'auto'}}><Banner /><Footer /></div>,
+    errorElement : <div style={{ width: '1440px', height: 'auto'}}><Banner /><PageErreur /><Footer /></div>,
     children: [{
 
         path:'APropos',
@@ -22,14 +24,8 @@ const router = createBrowserRouter([
 
 function PageErreur () {
     return <>
-    <header>
-        <nav>
-        <NavLink to='/'> Accueil </NavLink>
-        <NavLink to='APropos'> A Propos </NavLink>
-        <NavLink to='logement'> logement </NavLink>
-        </nav>
-    </header>
-    <div ClassName="Container">
+  
+    <div style={{ maxwidth: '1440px', height: '800px'}}>
        Erreur 404 
     </div>
     </>
@@ -38,10 +34,9 @@ function PageErreur () {
 function Root () {
     return <>
     <header>
-        <nav>
+    <nav style={{ width: '309px'}}>
         <NavLink to='/'> Accueil </NavLink>
-        <NavLink to='APropos'> A Propos </NavLink>
-        <NavLink to='logement'> logement </NavLink>
+        <NavLink to='APropos'> A Propos de moi  </NavLink>
         </nav>
     </header>
     <div ClassName="Container">
