@@ -1,6 +1,7 @@
 import Banner from './Components/Banner/Banner.js'
 import Footer from './Components/Footer/Footer.js'
 import Card from './Components/Card/Card.js'
+import CardList from './Components/CardList/CardList.js'
 import './Style/Style.scss';
 import React from 'react';
 import { NavLink, createBrowserRouter, useLocation } from 'react-router-dom';
@@ -36,7 +37,7 @@ const routerConfig = [
 ];
 
 function SectionAccueil() {
-  return <div style={{ maxwidth: '1240px', height: 'auto'}}><card />Section pour la page d'accueil</div>;
+  return <div ClassName="SectionAccueil"><Card /><CardList /></div>;
 }
 
 function PageErreur() {
@@ -61,7 +62,7 @@ function Root() {
 
   return (
     <>
-      <div ClassName="Container">
+      <div ClassName="SectionAccueil">
         {isAccueil && <SectionAccueil />}
       </div>
     </>
