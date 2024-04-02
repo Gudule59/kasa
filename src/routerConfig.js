@@ -25,7 +25,7 @@ const router = createBrowserRouter([
 function PageErreur () {
     return <>
   
-    <div style={{ maxwidth: '1440px', height: '800px'}}>
+    <div style={{ maxwidth: '1440px', height: '559px'}}>
        Erreur 404 
     </div>
     </>
