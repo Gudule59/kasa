@@ -1,51 +1,73 @@
 import Banner from './Components/Banner/Banner.js'
 import Footer from './Components/Footer/Footer.js'
+import Card from './Components/Card/Card.js'
 import './Style/Style.scss';
 import React from 'react';
-import { NavLink, createBrowserRouter } from 'react-router-dom';
+import { NavLink, createBrowserRouter, useLocation } from 'react-router-dom';
 
-const router = createBrowserRouter([
+const routerConfig = [
   {
     path: '/',
-    element: <div ClassName="main" style={{ maxwidth: '1440px', height: 'auto'}}><Banner /><Footer /></div>,
-    errorElement : <div style={{ width: '1440px', height: 'auto'}}><Banner /><PageErreur /><Footer /></div>,
-    children: [{
+    element: (
+      <div ClassName="main" style={{ maxwidth: '1440px', height: 'auto'}}>
+        <Banner />
+        <Root />
+        <Footer />
+      </div>
+    ),
+    errorElement: (
+      <div style={{ width: '1440px', height: 'auto'}}>
+        <Banner />
+        <PageErreur />
+        <Footer />
+      </div>
+    ),
+    children: [
+      {
+        path: 'APropos',
+        element: <APropos />,
+      },
+      {
+        path: 'logement',
+        element: <Logement />,
+      }
+    ]
+  }
+];
 
-        path:'APropos',
-        element: <div> A propos</div>
-    },
-    {
-        path:'logement',
-        element: <div> logement</div>
-    }
-]}])
-;
+function SectionAccueil() {
+  return <div style={{ maxwidth: '1240px', height: 'auto'}}><card />Section pour la page d'accueil</div>;
+}
 
-
-function PageErreur () {
-    return <>
-  
+function PageErreur() {
+  return (
     <div style={{ maxwidth: '1440px', height: '559px'}}>
-       Erreur 404 
+      Erreur 404
     </div>
-    </>
+  );
 }
 
-function Root () {
-    return <>
-    <header>
-    <nav style={{ width: '309px'}}>
-        <NavLink to='/'> Accueil </NavLink>
-        <NavLink to='APropos'> A Propos de moi  </NavLink>
-        </nav>
-    </header>
-    <div ClassName="Container">
-      
-    </div>
-    </>
+function APropos() {
+  return <div> A propos</div>;
 }
 
+function Logement() {
+  return <div> logement</div>;
+}
 
+function Root() {
+  const location = useLocation();
+  const isAccueil = routerConfig.some(route => route.path === location.pathname);
 
+  return (
+    <>
+      <div ClassName="Container">
+        {isAccueil && <SectionAccueil />}
+      </div>
+    </>
+  );
+}
+
+const router = createBrowserRouter(routerConfig);
 
 export default router;
