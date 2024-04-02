@@ -14,3 +14,24 @@ section{
     align-items: center;
   
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Espacement entre les éléments */
+	border-radius: 10px 10px 10px 10px;
+	background-color: #F6F6F6;
+	padding: 30px;
+}
+
+.grid-item {
+    border: 1px solid #ddd; /* Bordure pour délimiter les éléments */
+	border-radius: 10px 10px 10px 10px;
+	margin: 20px;
+}
+
+.grid-item img {
+    width: 340px; /* Pour que les images remplissent complètement les cases */
+	height: 340px;
+	border-radius: 10px 10px 10px 10px;
+}
