@@ -7,7 +7,7 @@ function Banner() {
 	
 return <>
 		<header>
-			<div className='Banniere'>
+			<div className='Banniere' >
 	    		<img className='lmj-logo' src={logo} alt="Logo" />
 				<nav>
 					<NavLink className='lmj-title' to='/'> Accueil </NavLink>

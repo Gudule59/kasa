@@ -1,13 +1,13 @@
-import Banner from './Components/Banner/Banner.js'
-import './App.css';
 import React from 'react';
-import { RouterProvider } from 'react-router-dom';
-import router from './routerConfig'; 
-
+import { BrowserRouter as Router } from 'react-router-dom'; 
+import routerConfig from './routerConfig'; 
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <Router>
+      {routerConfig}
+    </Router>
+  );
 }
 
 export default App;
-
