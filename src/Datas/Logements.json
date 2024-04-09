@@ -615,5 +615,38 @@
 			"Marais",
 			"Rivoli"
 		]
+	},
+	{
+		"id2": "1e18100000317",
+		"title2": "Loft de Luxe à la Défense",
+		"cover2": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-15-1.jpg",
+		"pictures2": [
+			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-15-1.jpg",
+			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-15-2.jpg",
+			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-15-3.jpg",
+			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-15-4.jpg",
+			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-15-5.jpg"
+		],
+		"description2": "Si vous êtes à la recherche de l'endroit idéal pour poser vos valises entre deux rdvs d'affaire, ne cherchez plus. Notre loft est l'endroit idéal. En plein coeur de la Défense, il dispose également de tous les équipements pour que vous soyez comme chez vous.",
+		"host2": {
+			"name2": "Julie Donatella",
+			"picture2": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-10.jpg"
+		},
+		"rating2": "3",
+		"location2": "Ile de France - La Défense",
+		"equipments2": [
+			"Baie vitrée",
+			"Télévision",
+			"Four",
+			"Frigo",
+			"Wi-fi",
+			"Micro-Ondes",
+			"Parking"
+		],
+		"tags2": [
+			"La Défense",
+			"Loft",
+			"Luxe"
+		]
 	}
 ]
