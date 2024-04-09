@@ -20,16 +20,16 @@ function Collapse(id) {
           <div key={AboutList.id}>
             <h1 className='grid-item2 img' onClick={() => toggleCollapse(AboutList.id)}>
               {AboutList.title} 
-              <button type="button" className="collapsecible">
+              <button type="button" className="btnCollapsecible">
               {openCollapsibleId === AboutList.id ? (
-                  <FontAwesomeIcon icon={faChevronUp} size="lg" />
+                  <FontAwesomeIcon icon={faChevronUp} />
                 ) : (
-                  <FontAwesomeIcon icon={faChevronDown} size="lg" />
+                  <FontAwesomeIcon icon={faChevronDown} />
                 )}
               </button>
             </h1>
             {openCollapsibleId === AboutList.id && (
-              <div className="content-box">
+              <div className="contentBox">
                 {AboutList.content}
               </div>
             )}
