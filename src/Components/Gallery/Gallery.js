@@ -21,9 +21,17 @@ function Gallery() {
   // Afficher les détails du logement
   return (
     <div>
-        <img src={logement.cover}  alt={logement.title} />
+        <img src={logement.cover}  alt={logement.title}      style={{
+              width: '1240px',
+              height: '430px',
+              
+            }}/>
       <h2>{logement.title}</h2>
-      <p>{logement.description}</p>
+      <p>{logement.tags}</p>
+      <p>{logement.rating}</p>
+      <p>{logement.location}</p>
+      <p>{logement.host.name}</p>
+            <img src={logement.host.picture}  alt={logement.host.name} />
       <div ><CollapseLogement /></div>
       {/* Afficher d'autres détails du logement */}
     </div>
