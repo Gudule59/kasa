@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import data from '../../Datas/AboutList.json';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import './Collapse.scss';
 
 function Collapse(id) {
@@ -18,7 +21,11 @@ function Collapse(id) {
             <h1 className='grid-item2 img' onClick={() => toggleCollapse(AboutList.id)}>
               {AboutList.title} 
               <button type="button" className="collapsecible">
-                {openCollapsibleId === AboutList.id ? 'arrow_back_ios-24px 2' : 'arrow_back_ios-24px 2'}
+              {openCollapsibleId === AboutList.id ? (
+                  <FontAwesomeIcon icon={faChevronUp} size="lg" />
+                ) : (
+                  <FontAwesomeIcon icon={faChevronDown} size="lg" />
+                )}
               </button>
             </h1>
             {openCollapsibleId === AboutList.id && (
