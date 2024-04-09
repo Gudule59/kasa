@@ -3,6 +3,7 @@ import { useParams, Link  } from 'react-router-dom'; // Importez useParams depui
 import './Gallery.scss';
 import data from '../../Datas/Logements.json';
 import PageErreurconfig from '../PageErreur/PageErreur.js'
+import CollapseLogement from '../CollapseLogement/CollapseLogment.js';
 
 function Gallery() {
   // Récupérer l'ID de l'URL
@@ -15,14 +16,23 @@ function Gallery() {
     return  <PageErreurconfig />
   }
 
+
+  
   // Afficher les détails du logement
   return (
     <div>
+        <img src={logement.cover}  alt={logement.title} />
       <h2>{logement.title}</h2>
       <p>{logement.description}</p>
+      <div ><CollapseLogement /></div>
       {/* Afficher d'autres détails du logement */}
     </div>
   );
 }
 
 export default Gallery;
+
+
+
+
+
