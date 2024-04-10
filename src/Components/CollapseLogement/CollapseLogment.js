@@ -31,6 +31,7 @@ function CollapseLogement() {
             <div className='grid-container2'>
                 {logement && (
                     <>
+                    <div>
                         <h3 className='grid-item2 img' onClick={toggleDescription}>
                             Description
                             <button type="button" className="btnCollapsecible">
@@ -46,8 +47,9 @@ function CollapseLogement() {
                                 {logement.description}
                             </div>
                         )}
-
-<h3 className='grid-item2 img' onClick={toggleEquipment}>
+                    </div>
+                    <div>
+                        <h3 className='grid-item2' onClick={toggleEquipment}>
                         Équipement
                         <button type="button" className="btnCollapsecible">
                             {isEquipmentOpen ? (
@@ -66,7 +68,7 @@ function CollapseLogement() {
                             </ul>
                         </div>
                     )}
-                    </>
+                  </div>  </>
                 )}
             </div>
         </section>
