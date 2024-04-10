@@ -4,6 +4,7 @@ import './Gallery.scss';
 import data from '../../Datas/Logements.json';
 import PageErreurconfig from '../PageErreur/PageErreur.js'
 import CollapseLogement from '../CollapseLogement/CollapseLogment.js';
+import Carrousel from'../Carrousel/Carrousel.js';
 
 function Gallery() {
   // Récupérer l'ID de l'URL
@@ -22,7 +23,7 @@ function Gallery() {
   return (
     <section className='logementMain'>
       <article >
-        <img src={logement.cover}  alt={logement.title}    />
+        <Carrousel />
             </article>
             <article className='logementArticle'>
             
