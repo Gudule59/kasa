@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import data from '../../Datas/Logements.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import './Carrousel.scss';
+import data from '../../Datas/Logements.json';
 
 function Carrousel() {
-  const [images, choixImage] = useState([]); // depart du tableau vide
-  const [imageAfficher, ImageAfficherMAJ] = useState(0); // depart du tableau a 0
-  const { id } = useParams(); // je recupere l'id dans l'url pour ouvrir les images de l'image cliqué
+  const [images, choixImage] = useState([]);
+  const [imageAfficher, ImageAfficherMAJ] = useState(0);
+  const { id } = useParams();
 
   useEffect(() => {
-    // Filtrer les données pour trouver le logement correspondant à l'ID dans l'URL
     const logement = data.find(logement => logement.id === id);
     if (logement) {
       choixImage(logement.pictures);
@@ -30,14 +29,14 @@ function Carrousel() {
     <div className="Carrousel">
       {images.length > 1 && (
         <>
-          <button onClick={imagePrecedende}> <FontAwesomeIcon icon={faChevronLeft} /></button>
+          <button className="arrow left" onClick={imagePrecedende}><FontAwesomeIcon icon={faChevronLeft} /></button>
           <img className='imgCarrousel' src={images[imageAfficher]} alt={`Image ${imageAfficher + 1}`} />
-          <button onClick={imageSuivante}> <FontAwesomeIcon icon={faChevronRight} /> </button>
+          <button className="arrow right" onClick={imageSuivante}><FontAwesomeIcon icon={faChevronRight} /></button>
           <div className="image-number"> {imageAfficher + 1} / {images.length}</div>
         </>
       )}
       {images.length === 1 && (
-        <img className='imgCarrousel'  src={images[0]} alt="Image unique" />
+        <img className='imgCarrousel' src={images[0]} alt="Image unique" />
       )}
     </div>
   );

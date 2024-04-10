@@ -1,9 +1,37 @@
-.imgCarrousel {
-
+.Carrousel {
+    position: relative;
+  }
+  
+  .imgCarrousel {
     width: 1240px;
     height: 415px;
-}
-
-.image-number{
-    color: red;
-}
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 34px;
+  }
+  
+  .left {
+    left: 0;
+  }
+  
+  .right {
+    right: 0;
+  }
+  
+  .image-number {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    top: 90%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 15px;
+    
+  }
