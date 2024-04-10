@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../../Datas/Logements.json';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import './Carrousel.scss';
 
 function Carrousel() {
@@ -28,9 +30,9 @@ function Carrousel() {
     <div className="Carrousel">
       {images.length > 1 && (
         <>
-          <button onClick={imagePrecedende}> METTRE UN PICTO ET PLACER DANS L'image </button>
+          <button onClick={imagePrecedende}> <FontAwesomeIcon icon={faChevronLeft} /></button>
           <img className='imgCarrousel' src={images[imageAfficher]} alt={`Image ${imageAfficher + 1}`} />
-          <button onClick={imageSuivante}> METTRE UN PICTO ET PLACER DANS L'image </button>
+          <button onClick={imageSuivante}> <FontAwesomeIcon icon={faChevronRight} /> </button>
           <div className="image-number"> {imageAfficher + 1} / {images.length}</div>
         </>
       )}
