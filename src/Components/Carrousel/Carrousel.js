@@ -1,42 +1,41 @@
-import React, { useState } from 'react';
-import './Carrousel.scss';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import data from '../../Datas/Logements.json';
+import './Carrousel.scss';
 
-function Carrousel () {
+function Carrousel() {
+  const [images, setImages] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { id } = useParams();
 
-  const goToPreviousImage = () => {
-    setCurrentImageIndex((prevIndex) => {
-      if (prevIndex === 0) {
-        return data.length - 1;
-      } else {
-        return prevIndex - 1;
-      }
-    });
+  useEffect(() => {
+    // Filtrer les données pour trouver le logement correspondant à l'ID dans l'URL
+    const logement = data.find(logement => logement.id === id);
+    if (logement) {
+      setImages(logement.pictures);
+    }
+  }, [id]);
+
+  const imagePrecedende = () => {
+    setCurrentImageIndex(prevIndex => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
   };
 
-  const goToNextImage = () => {
-    setCurrentImageIndex((prevIndex) => {
-      if (prevIndex === data.length - 1) {
-        return 0;
-      } else {
-        return prevIndex + 1;
-      }
-    });
+  const imageSuivante = () => {
+    setCurrentImageIndex(prevIndex => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
   };
 
   return (
     <div className="Carrousel">
-      {data.length > 1 && (
+      {images.length > 1 && (
         <>
-          <button onClick={goToPreviousImage}>Image précédente</button>
-          <img src={data[currentImageIndex].cover} alt={data[currentImageIndex].title} />
-          <button onClick={goToNextImage}>Image suivante</button>
-          <div className="image-number">Image {currentImageIndex + 1} sur {data.length}</div>
+          <button onClick={imagePrecedende}> METTRE UN PICTO ET PLACER DANS L'image </button>
+          <img className='imgCarrousel' src={images[currentImageIndex]} alt={`Image ${currentImageIndex + 1}`} />
+          <button onClick={imageSuivante}> METTRE UN PICTO ET PLACER DANS L'image </button>
+          <div className="image-number"> {currentImageIndex + 1} / {images.length}</div>
         </>
       )}
-      {data.length === 1 && (
-        <img src={data[0].cover} alt={data[0].title} />
+      {images.length === 1 && (
+        <img className='imgCarrousel'  src={images[0]} alt="Image unique" />
       )}
     </div>
   );
