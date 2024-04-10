@@ -4,3 +4,32 @@ height: 415px;
 border: none;
 }
 
+
+.logementMain {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+ width: 1240px;
+
+}
+
+.logementArticle{
+    width: 1240px;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+
+
+}
+.host{
+display: flex;
+
+}
+
+.imgHost{
+        width: 64px;
+        height: 64px;
+    border-radius: 50px 50px 50px 50px;
+    padding-left: 10px;
+}

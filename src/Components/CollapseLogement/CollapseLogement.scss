@@ -1,7 +1,7 @@
 .grid-container2 {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-	width: 1023px;
+    grid-template-columns: repeat(2, 1fr);
+	width: 1240px;
     height: auto;
 }
 
@@ -13,7 +13,7 @@
 	border-radius: 10px 10px 10px 10px;
     background-color: #FF6060;
     color: white;
-    width: auto;
+    width: 85%;
     height: 54px;
     padding-left: 20px;
     padding-right: 20px;

@@ -20,21 +20,35 @@ function Gallery() {
   
   // Afficher les détails du logement
   return (
-    <div>
-        <img src={logement.cover}  alt={logement.title}      style={{
-              width: '1240px',
-              height: '430px',
-              
-            }}/>
+    <section className='logementMain'>
+      <article >
+        <img src={logement.cover}  alt={logement.title}    />
+            </article>
+            <article className='logementArticle'>
+            
+            <div>
       <h2>{logement.title}</h2>
-      <p>{logement.tags}</p>
-      <p>{logement.rating}</p>
       <p>{logement.location}</p>
-      <p>{logement.host.name}</p>
-            <img src={logement.host.picture}  alt={logement.host.name} />
+      <p>{logement.tags}</p>
+      </div> 
+      
+      <div>
+      <div className='host'>
+        <p>{logement.host.name}</p>
+        <img className='imgHost' src={logement.host.picture}  alt={logement.host.name} />
+        </div>
+        <p>{logement.rating}</p>
+        </div>
+           
+          
+            </article >
+            
+        
+            <article >
       <div ><CollapseLogement /></div>
       {/* Afficher d'autres détails du logement */}
-    </div>
+      </article >
+    </section>
   );
 }
 
