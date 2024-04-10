@@ -28,14 +28,14 @@ function Gallery() {
             <article className='logementArticle'>
             
             <div>
-      <h2>{logement.title}</h2>
+      <h2 className='logementTitre'>{logement.title}</h2>
       <p>{logement.location}</p>
       <p>{logement.tags}</p>
       </div> 
       
       <div>
       <div className='host'>
-        <p>{logement.host.name}</p>
+        <p className='logementName'>{logement.host.name}</p>
         <img className='imgHost' src={logement.host.picture}  alt={logement.host.name} />
         </div>
         <p>{logement.rating}</p>
@@ -47,7 +47,7 @@ function Gallery() {
         
             <article >
       <div ><CollapseLogement /></div>
-      {/* Afficher d'autres détails du logement */}
+     
       </article >
     </section>
   );

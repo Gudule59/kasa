@@ -6,11 +6,10 @@ border: none;
 
 
 .logementMain {
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
- width: 1240px;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ width: 1440px;
 
 }
 
@@ -29,7 +28,23 @@ display: flex;
 
 .imgHost{
         width: 64px;
-        height: 64px;
+       
     border-radius: 50px 50px 50px 50px;
     padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.logementTitre{
+    color: #FF6060 ;
+    font-size: 36px;
+
+} 
+.logementName {
+
+    text-align: right;
+width: 93px;
+color: #FF6060 ;
+font-size: 18px;
+
+
 }
