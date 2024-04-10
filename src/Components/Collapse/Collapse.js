@@ -15,7 +15,7 @@ function Collapse(id) {
   return (
     <>
     <section className="Collapse">
-      <div className='grid-container2'>
+      <div className='grid-container3'>
         {data.map((AboutList) => (
           <div key={AboutList.id}>
             <h1 className='grid-item2 img' onClick={() => toggleCollapse(AboutList.id)}>
