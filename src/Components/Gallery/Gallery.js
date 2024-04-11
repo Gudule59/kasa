@@ -6,6 +6,7 @@ import PageErreurconfig from '../PageErreur/PageErreur.js'
 import CollapseLogement from '../CollapseLogement/CollapseLogment.js';
 import Carrousel from'../Carrousel/Carrousel.js';
 import Etoile from '../Etoile/Etoile.js';
+import Tags  from '../Tags/Tags.js';
 
 function Gallery() {
   // Récupérer l'ID de l'URL
@@ -31,7 +32,7 @@ function Gallery() {
             <div>
       <h2 className='logementTitre'>{logement.title}</h2>
       <p>{logement.location}</p>
-      <p>{logement.tags}</p>
+      <div><Tags /></div>
       </div> 
       
       <div>
