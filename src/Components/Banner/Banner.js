@@ -11,7 +11,7 @@ return <>
 	    		<img className='lmj-logo' src={logo} alt="Logo" />
 				<nav>
 					<NavLink className='lmj-title' to='/'> Accueil </NavLink>
-					<NavLink className='lmj-title' to='APropos'> A Propos </NavLink>
+					<NavLink className='lmj-title' to='/APropos'> A Propos </NavLink>
 				</nav>
 			</div>
 		</header>
