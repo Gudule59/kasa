@@ -5,6 +5,7 @@ import data from '../../Datas/Logements.json';
 import PageErreurconfig from '../PageErreur/PageErreur.js'
 import CollapseLogement from '../CollapseLogement/CollapseLogment.js';
 import Carrousel from'../Carrousel/Carrousel.js';
+import Etoile from '../Etoile/Etoile.js';
 
 function Gallery() {
   // Récupérer l'ID de l'URL
@@ -38,7 +39,7 @@ function Gallery() {
         <p className='logementName'>{logement.host.name}</p>
         <img className='imgHost' src={logement.host.picture}  alt={logement.host.name} />
         </div>
-        <p>{logement.rating}</p>
+        <Etoile />
         </div>
            
           
