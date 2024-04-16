@@ -3,10 +3,11 @@ import { useParams, Link  } from 'react-router-dom'; // Importez useParams depui
 import './Gallery.scss';
 import data from '../../Datas/Logements.json';
 import PageErreurconfig from '../PageErreur/PageErreur.js'
-import CollapseLogement from '../CollapseLogement/CollapseLogment.js';
+import Collapse from '../Collapse/Collapse.js';
 import Carrousel from'../Carrousel/Carrousel.js';
 import Etoile from '../Etoile/Etoile.js';
 import Tags  from '../Tags/Tags.js';
+
 
 function Gallery() {
   // Récupérer l'ID de l'URL
@@ -48,7 +49,7 @@ function Gallery() {
             
         
             <article >
-      <div ><CollapseLogement /></div>
+      <div ><Collapse data={data} /></div>
      
       </article >
     </section>
