@@ -49,7 +49,15 @@ function Gallery() {
             
         
             <article >
-      <div ><Collapse data={data} /></div>
+            <div className='logementCollapse'>
+            <div className='collapse'>
+                    <Collapse title="Description" content={<p>{logement.description}</p>} />
+                    </div>
+                    <div className='collapse'>
+                      
+                    <Collapse title="Équipements" content={<ul>{logement.equipments.map((equipment, index) => <li key={index}>{equipment}</li>)}</ul>} />
+                </div>
+                </div>
      
       </article >
     </section>

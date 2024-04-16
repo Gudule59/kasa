@@ -18,9 +18,17 @@ border: none;
     display: flex;
     align-items:center;
     justify-content:space-between;
-
-
+    
 }
+
+.logementCollapse{
+    width: 1240px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    
+}
+
 .host{
 display: flex;
 
@@ -47,4 +55,9 @@ color: #FF6060 ;
 font-size: 18px;
 
 
+}
+
+.collapse{
+    width: 582px;
+    
 }
