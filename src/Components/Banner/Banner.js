@@ -7,11 +7,11 @@ function Banner() {
 	
 return <>
 		<header>
-			<div className='Banniere' >
-	    		<img className='lmj-logo' src={logo} alt="Logo" />
+			<div className='Banner' >
+	    		<img className='Banner__logo' src={logo} alt="Logo" />
 				<nav>
-					<NavLink className='lmj-title' to='/'> Accueil </NavLink>
-					<NavLink className='lmj-title' to='/APropos'> A Propos </NavLink>
+					<NavLink className='Banner__title' to='/'> Accueil </NavLink>
+					<NavLink className='Banner__title' to='/APropos'> A Propos </NavLink>
 				</nav>
 			</div>
 		</header>

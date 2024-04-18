@@ -1,39 +1,20 @@
+@import '../../Style/Style.scss';
 
-.lmj-banner {
-	color: black;
-	text-align: right;
-	padding: 32px;
-	border-bottom: solid 3px black;
-	display: flex;
-	justify-content: flex-end;
-	flex-direction: row;
-	align-items: center;
-}
-
-.lmj-title {
-	padding-left: 15px;
-}
-
-.lmj-logo {
-	height: 68px;
-	width: 210px;
-}
-
-.NavLink{
-padding-left: 20px;
-
-}
 header{
-	display: flex;
-	justify-content: center;
+	@include flex-center;
+
+	.Banner{
+		@include flex-between;
+		width: 1240px;
+		height: 68px;
+		margin-bottom: 25px;
+
+			.Banner__title {
+				padding-left: 15px;
+				text-decoration: none;
+			}
+			.Banner__logo {
+				width: 210px;
+			}
+	}
 } 
-
-.Banniere{
-	width: 1240px;
-	height: 68px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between; 
-	margin-bottom: 25px;
-
-}

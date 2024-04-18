@@ -15,12 +15,11 @@ function CardList() {
   };
 
   return (
-    <section>
-      <div className='lmj-CardList' className="grid-container">
+    <section className='listeLogement'>
+      <div className="listeLogement__container">
         {data.map((Logements) => (
-          <div key={Logements.id} className="grid-item">
+          <div key={Logements.id} className="listeLogement__container__item">
             <div style={{ position: "relative" }}>
-              {/* Utiliser Link pour naviguer vers la page du logement avec l'ID correspondant */}
               <Link to={`/logement/${Logements.id}/`}>
                 <img
                   src={Logements.cover}
@@ -28,7 +27,7 @@ function CardList() {
                   onClick={() => setSelectedId(Logements.id)} // Mettre à jour l'ID sélectionné lors du clic sur l'image
                 />
               </Link>
-              <div className="image-title" style={{ position: "absolute", bottom: "1%", left: "1%", backgroundColor: "rgba(0, 0, 0, 0.7)", color: "white", padding: "5px", fontSize: "12px" }}>{Logements.title}</div>
+              <div className="titre"> {Logements.title}</div>
             </div>
           </div>
         ))}

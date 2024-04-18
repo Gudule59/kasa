@@ -1,23 +1,35 @@
-.main{
+// Variables
+
+$bord-rond: 25px 25px 25px 25px;
+
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.body {
+    font-family: 'Montserrat';
+}
+
+.main {
     width: 1240px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    @include flex-center;
 }
 
-.main2{
+.main2 {
     width: 1440px;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+    @include flex-center;
 }
 
-.SectionAccueil{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+.sectionAccueil {
+ @include flex-center;
 }
