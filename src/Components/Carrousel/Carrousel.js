@@ -29,9 +29,9 @@ function Carrousel() {
     <div className="Carrousel">
       {images.length > 1 && (
         <>
-          <button className="arrow left" onClick={imagePrecedende}><FontAwesomeIcon icon={faChevronLeft} /></button>
+          <button className="fleche " onClick={imagePrecedende}><FontAwesomeIcon icon={faChevronLeft} /></button>
           <img className='imgCarrousel' src={images[imageAfficher]} alt={`Image ${imageAfficher + 1}`} />
-          <button className="arrow right" onClick={imageSuivante}><FontAwesomeIcon icon={faChevronRight} /></button>
+          <button className="fleche droite" onClick={imageSuivante}><FontAwesomeIcon icon={faChevronRight} /></button>
           <div className="image-number"> {imageAfficher + 1} / {images.length}</div>
         </>
       )}
