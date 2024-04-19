@@ -1,39 +1,54 @@
-.grid-container3 {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-	width: 1023px;
-    height: auto;
-}
+@import '../../Style/Style.scss';
 
-.grid-item2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #ddd; 
-	border-radius: 10px 10px 10px 10px;
-    background-color: #FF6060;
-    color: white;
-    width: auto;
-    height: 54px;
-    padding-left: 20px;
-    padding-right: 20px;
-	
-}
-
-.Collapse{
+.Collapse {
     display: flex;
     justify-content: center;
-}
 
-.btnCollapsecible{
-    background-color: #FF6060;
-    color: white;
-    border: none;
-    font-size: 2rem;
+    .Collapse__container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 1023px;
+        height: auto;
 
-}
+        .Collapse__container__item {
+            @include flex-between;
+            border: 1px solid #ddd; 
+            border-radius: 10px;
+            background-color: #FF6060;
+            color: white;
+            width: auto;
+            height: 54px;
+            padding-left: 20px;
+            padding-right: 20px;
+            position: relative; 
 
-.contentBox{
- margin-left: 20px;
- margin-right: 20px;
+            .btnCollapsecible {
+                background-color: #FF6060;
+                color: white; 
+                border: none;
+                font-size: 2rem;
+            }
+        }
+
+        .contentBox {
+            margin-left: 20px;
+            margin-right: 20px;
+            opacity: 0; 
+            position: absolute; 
+            top: 100%; 
+            left: 0;
+            right: 0;
+            transition: opacity 0s;
+            padding-left: 20px;
+            background-color: hsl(0, 27%, 96%);
+        }
+
+        .contentBox.fade-in {
+            opacity: 1;
+            border-radius: $bord-rond;
+            position: relative; 
+            top: 0%; 
+            transition: opacity 1s;
+        }
+    }
 }

@@ -12,24 +12,22 @@ function Collapse({ title, content }) {
 
     return (
         <div className='Collapse'>
-        <div className="grid-container3 ">
-            <h3 className="grid-item2" onClick={toggleCollapse}>
-                {title}
-                <button type="button" className="btnCollapsecible">
-                    {isOpen ? (
-                        <FontAwesomeIcon icon={faChevronUp} />
-                    ) : (
-                        <FontAwesomeIcon icon={faChevronDown} />
-                    )}
-                </button>
-            </h3>
-            {isOpen && (
-                <div className="contentBox">
+            <div className={`Collapse__container ${isOpen ? 'open' : ''}`}>
+                <h3 className={`Collapse__container__item ${isOpen ? 'active' : ''}`} onClick={toggleCollapse}>
+                    {title}
+                    <button type="button" className="btnCollapsecible">
+                        {isOpen ? (
+                            <FontAwesomeIcon icon={faChevronUp} />
+                        ) : (
+                            <FontAwesomeIcon icon={faChevronDown} />
+                        )}
+                    </button>
+                </h3>
+                <div className={`contentBox ${isOpen ? 'fade-in' : ''}`}>
                     {content}
                 </div>
-            )}
+            </div>
         </div>
-         </div>
     );
 }
 
