@@ -7,7 +7,7 @@
     .Collapse__container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        width: 1023px;
+        width: 100%;
         height: auto;
 
         .Collapse__container__item {
@@ -27,9 +27,13 @@
                 color: white; 
                 border: none;
                 font-size: 2rem;
+                transition: transform 0.3s ease-in-out; 
+            }
+            .rotate {
+                transform: rotate(180deg);
+                transition: transform 0.3s;
             }
         }
-
         .contentBox {
             margin-left: 20px;
             margin-right: 20px;
@@ -52,3 +56,4 @@
         }
     }
 }
+

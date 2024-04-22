@@ -13,19 +13,20 @@ function Collapse({ title, content }) {
     return (
         <div className='Collapse'>
             <div className={`Collapse__container ${isOpen ? 'open' : ''}`}>
-                <h3 className={`Collapse__container__item ${isOpen ? 'active' : ''}`} onClick={toggleCollapse}>
+                <h3 className={`Collapse__container__item`} onClick={toggleCollapse}>
                     {title}
-                    <button type="button" className="btnCollapsecible">
-                        {isOpen ? (
-                            <FontAwesomeIcon icon={faChevronUp} />
+                    <button type="button" className={`btnCollapsecible ${isOpen ? 'rotate' : ''}`}>
+                        {isOpen ?  (
+                            <FontAwesomeIcon icon={faChevronUp} className={isOpen ? 'rotate' : ''} />
                         ) : (
-                            <FontAwesomeIcon icon={faChevronDown} />
+                            <FontAwesomeIcon icon={faChevronDown} className={isOpen ? 'rotate' : ''} />
                         )}
                     </button>
                 </h3>
                 <div className={`contentBox ${isOpen ? 'fade-in' : ''}`}>
-                    {content}
-                </div>
+                        {content}
+                    </div>
+                
             </div>
         </div>
     );

@@ -24,22 +24,22 @@ function Gallery() {
   
   // Afficher les détails du logement
   return (
-    <section className='logementMain'>
+    <section className='logement__Main'>
       <article >
         <Carrousel />
             </article>
-            <article className='logementArticle'>
+            <article className='logement__Article'>
             
             <div>
-      <h2 className='logementTitre'>{logement.title}</h2>
+      <h2 className='logement__Titre'>{logement.title}</h2>
       <p>{logement.location}</p>
       <div><Tags /></div>
       </div> 
       
       <div>
       <div className='host'>
-        <p className='logementName'>{logement.host.name}</p>
-        <img className='imgHost' src={logement.host.picture}  alt={logement.host.name} />
+        <p className='host__logement__Name'>{logement.host.name}</p>
+        <img className='img__Host' src={logement.host.picture}  alt={logement.host.name} />
         </div>
         <Etoile />
         </div>
@@ -49,7 +49,7 @@ function Gallery() {
             
         
             <article >
-            <div className='logementCollapse'>
+            <div className='logement__Collapse'>
             <div className='collapse'>
                     <Collapse title="Description" content={<p>{logement.description}</p>} />
                     </div>

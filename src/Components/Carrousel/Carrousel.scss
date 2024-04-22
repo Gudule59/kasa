@@ -1,7 +1,9 @@
+@import '../../Style/Style.scss';
+
 .Carrousel {   
   position: relative;
-  
-  
+  @include flex-center;
+
     .fleche {
       position: absolute;
       top: 50%;
@@ -27,9 +29,9 @@
      }
 
     .imgCarrousel {
+    object-fit: cover;
     width: 1240px;
-    height: 415px;
-}
-  
+    max-height: 415px;
+}  
 
 }

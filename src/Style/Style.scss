@@ -2,6 +2,12 @@
 
 $bord-rond: 25px 25px 25px 25px;
 
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 @mixin flex-center {
     display: flex;
@@ -16,8 +22,8 @@ $bord-rond: 25px 25px 25px 25px;
 }
 
 
-
 .body {
+    width: 100px;
     font-family: 'Montserrat';
 }
 
@@ -35,3 +41,83 @@ $bord-rond: 25px 25px 25px 25px;
 .sectionAccueil {
  @include flex-center;
 }
+
+
+
+
+@media screen and (max-width: 1240px) {
+    /* Mettez ici vos styles spécifiques pour les appareils mobiles */
+	.listeLogement .listeLogement__container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+   
+    .image-banner .image {
+        width: 1024px;
+        height: 203px;
+    }
+    .image-banner .titre {
+        font-size: 31px;
+    }
+    .Carrousel {
+        width: 1024px;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 1044px) {
+	.listeLogement .listeLogement__container {
+		grid-template-columns: repeat(2, 1fr);
+		}
+     
+        .image-banner .image {
+            width: 844px;
+            height: 183px;
+        }
+        .image-banner .titre {
+            font-size: 27px;
+        }
+        .Carrousel {
+            width: 844px;
+            max-height: 315px;
+        }
+    
+    }
+
+
+    @media screen and (max-width: 844px) {
+        .listeLogement .listeLogement__container {
+            grid-template-columns: repeat(1, 1fr);
+            }
+           
+            .image-banner .image {
+                width: 544px;
+                height: 163px;
+            }
+            .image-banner .titre {
+                font-size: 21px;
+            }
+            .Carrousel {
+                width: 544px;
+            }
+        
+        }
+
+        @media screen and (max-width: 544px) {
+            .listeLogement .listeLogement__container {
+                grid-template-columns: repeat(1, 1fr);
+                }
+               
+                .image-banner .image {
+                    width: 344px;
+                    height: 143px;
+                }
+                  .image-banner .titre {
+                 font-size: 17px;
+            }
+            .Carrousel {
+                width: 344px;
+                max-height: 115px;
+            }
+            }

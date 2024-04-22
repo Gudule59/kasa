@@ -2,6 +2,7 @@
 
 .listeLogement {
 	@include flex-center;
+	width: 100%;
 
 	.listeLogement__container {
 	    display: grid;
@@ -10,6 +11,7 @@
 		border-radius: $bord-rond;
 		background-color: #F6F6F6;
 		padding: 30px;
+		
 
 		.listeLogement__container__item{
 			border: none;
@@ -35,5 +37,3 @@
 		}
 	}
 }
-
-

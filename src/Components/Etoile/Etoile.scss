@@ -1,16 +1,13 @@
-.etoile-active {
-    color: red;
-    padding: 2px;
-    font-size: 24px;
+.etoile{
+  padding: 3px;
+  padding: 2px;
+  font-size: 24px;
+
+  .etoile-active {
+    color: #FF6060;
   }
   
   .etoile-inactive {
     color: gray;
-    padding: 2px;
-    font-size: 24px;
   }
-
-  .etoile{
- padding: 3px;
-
   }

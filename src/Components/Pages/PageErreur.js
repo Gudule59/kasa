@@ -5,8 +5,13 @@ import PageErreurconfig from'../PageErreur/PageErreur.js'
 
     
 function PageErreur() {
-    return <div > <Banner /> <PageErreurconfig /><Footer />
-         </div>;
+    return (
+        <>
+            <Banner />
+            <PageErreurconfig />
+            <Footer />
+        </>
+    );  
   }
 
   export default PageErreur;
