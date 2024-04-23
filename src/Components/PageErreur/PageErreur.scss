@@ -3,6 +3,7 @@
 
 .erreurMain {
     @include flex-column;
+    font-family: $font-familly;
     
        .erreurMain__numero{
         @include flex-center;
