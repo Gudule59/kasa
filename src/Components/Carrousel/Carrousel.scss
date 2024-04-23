@@ -3,10 +3,12 @@
 .Carrousel {   
   position: relative;
   @include flex-center;
+ 
 
     .fleche {
       position: absolute;
       top: 50%;
+      right: 97%;
       transform: translateY(-50%);
       background: transparent;
       border: none;
