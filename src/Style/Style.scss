@@ -127,6 +127,7 @@ $transition-collapse-width:   width .35s ease;
 @media screen and (max-width: 544px) {
   .listeLogement .listeLogement__container {
     grid-template-columns: repeat(1, 1fr);
+
   }
 .erreurMain .erreurMain__message {
     font-size: 19px;
@@ -141,18 +142,42 @@ height: 180px;
     font-size: 17px;
   }
   .Carrousel {
-    width: 300px;
-    height: 240px;
+    width: 350px;
+    height: 170px;
   }
   .Carrousel .imgCarrousel {
-    width: 300px;
-    height: 240px;
+    width: 350px;
+    height: 140px;
   }
+  .logement__Main .logement__Article .logement__Titre {
+  font-size: 20px;
+  }
+
     .logement__Main .logement__Article {
         width: 360px;
+        flex-direction: column;
+        align-items: baseline;
+    }
+    .bloc__host{
+      display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+
+    }
+    .logement__Main .logement__Collapse {
+      width:360px ;
     }
     .logement__Main .logement__Collapse .collapse {
         width:360px ;
+        
       }
-
+      .logement__Main .logement__Article .host {
+      margin-left: 40px;
+      }
+  
+      .listeLogement .listeLogement__container .listeLogement__container__item img {
+        width: 250px;
+        height: 250px;
+      }
 }

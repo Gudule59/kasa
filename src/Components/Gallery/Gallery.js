@@ -36,7 +36,7 @@ function Gallery() {
       <div><Tags /></div>
       </div> 
       
-      <div>
+      <div className='bloc__host'>
       <div className='host'>
         <p className='host__logement__Name'>{logement.host.name}</p>
         <img className='img__Host' src={logement.host.picture}  alt={logement.host.name} />

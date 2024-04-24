@@ -6,6 +6,7 @@
 
 	.listeLogement__container {
 	    display: grid;
+		margin-top: 20px;
     	grid-template-columns: repeat(3, 1fr);
     	gap: 20px; 
 		border-radius: $bord-rond;
