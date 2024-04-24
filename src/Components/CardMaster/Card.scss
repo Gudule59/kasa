@@ -5,10 +5,10 @@
     @include flex-center;
     position: relative;
        & .image {
-            height: 223px;
+            height: 200px;
             width: auto;
             border-radius: $bord-rond;
-             margin-bottom: 25px;
+             
            
         }
         & .titre {

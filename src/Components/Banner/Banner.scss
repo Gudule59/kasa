@@ -5,15 +5,16 @@ header{
 	.Banner{
 	@include flex-between;
 	width: 1240px;
-	height: 68px;
-	margin-bottom: 25px;
+	height: 40px;
+	margin-top: 12px;
+	margin-bottom: 40px;
 		.Banner__title {
 		padding-left: 15px;
 		text-decoration: none;
 		font-family: $font-familly;
 		}
 		.Banner__logo {
-		width: 210px;
+		width: 190px;
 		}
 	}
 } 
