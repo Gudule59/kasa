@@ -129,8 +129,12 @@ $transition-collapse-width:   width .35s ease;
     grid-template-columns: repeat(1, 1fr);
 
   }
+  .erreurMain .erreurMain__numero {
+    font-size: 180px;
+    margin-bottom:35px;
+  }
 .erreurMain .erreurMain__message {
-    font-size: 19px;
+    font-size: 15px;
   }
 
   .image-banner .image {
@@ -143,12 +147,19 @@ height: 180px;
   }
   .Carrousel {
     width: 350px;
-    height: 170px;
+    height: 160px;
   }
   .Carrousel .imgCarrousel {
     width: 350px;
     height: 140px;
   }
+  .Carrousel .fleche {
+ right: 90%;
+  }
+  .Carrousel .droite  {
+    right: 0%;
+     }
+   
   .logement__Main .logement__Article .logement__Titre {
   font-size: 20px;
   }
@@ -157,6 +168,7 @@ height: 180px;
         width: 360px;
         flex-direction: column;
         align-items: baseline;
+        font-size: 12px;
     }
     .bloc__host{
       display: flex;
